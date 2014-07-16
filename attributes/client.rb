@@ -32,10 +32,10 @@ when 'debian'
   if debian_before_squeeze? || ubuntu_before_lucid?
     default['mariadb']['client']['packages'] = %w{mariadb-client libmariadbclient15-dev}
   else
-    default['mariadb']['client']['packages'] = %w{mariadb-client-5.5 libmariadbclient-dev}
+    default['mariadb']['client']['packages'] = %w{mariadb-client libmariadbclient-dev}
   end
 when 'freebsd'
-  default['mariadb']['client']['packages'] = %w{mariadb55-client}
+  default['mariadb']['client']['packages'] = %w{mariadb-client}
 when 'windows'
   default['mariadb']['client']['version']      = '6.0.2'
   default['mariadb']['client']['arch']         = 'win32' # force 32 bit to work with mariadb gem
